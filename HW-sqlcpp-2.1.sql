@@ -17,7 +17,7 @@ CREATE TABLE IF NOT EXISTS GenreArtist (
 CREATE TABLE IF NOT EXISTS Album (
 	id SERIAL PRIMARY KEY,
 	name VARCHAR(80) NOT NULL,
-	release_year interval YEAR NOT NULL 
+	release_alb date NOT NULL 
 );
 
 CREATE TABLE IF NOT EXISTS ArtistAlbum (
@@ -37,5 +37,5 @@ CREATE TABLE IF NOT EXISTS Collection (
 	id SERIAL PRIMARY KEY,
 	track_id INTEGER REFERENCES Track(id),
 	name VARCHAR(80) NOT NULL,
-	release_year interval YEAR NOT NULL 
+	release_coll date NOT NULL 
 );
